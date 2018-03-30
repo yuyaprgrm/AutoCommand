@@ -1,5 +1,6 @@
-# 増やす際は4行目5行目のように 「 - command」 と書き足してください
+# 増やす際は 「 - command」 と書き足してください
 
 コマンド:
- - time set 0
- - time stop
+# 使用例
+# - time set 0
+# - time stop

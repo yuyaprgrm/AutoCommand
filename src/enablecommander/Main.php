@@ -14,9 +14,13 @@ class Main extends PluginBase
         $this->loadSetting();
         $sender = new ConsoleCommandSender();
         $setting = $this->config->get("コマンド");
-        foreach ($setting as $command) {
-            $this->getServer()->dispatchCommand($sender, $command);
-            $this->getLogger()->info("§6".$command." §aコマンドを実行しました");
+        if (!empty($setting)) {
+            foreach ($setting as $command) {
+                $this->getServer()->dispatchCommand($sender, $command);
+                $this->getLogger()->info("§6".$command." §aコマンドを実行しました");
+            }
+        } else {
+            $this->getLogger()->info("§b自動生成されたconfig.ymlからコマンドを設定してください");
         }
         $this->getLogger()->info("§b役目を果たしたのでプラグインを無効化します");
         $this->getServer()->getPluginManager()->disablePlugin($this);
