@@ -1,0 +1,2 @@
+# EnableCommander
+サーバー起動時にConfigで指定したコマンドを一括実行します
