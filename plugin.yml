@@ -1,5 +1,5 @@
-name: EnableCommander
-main: enablecommander\Main
+name: AutoCommand
+main: autocommand\Main
 api:
  - 3.0.0
  - 3.0.0-ALPHA11
