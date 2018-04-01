@@ -24,7 +24,6 @@ class CommandHolder
             return;
         }
 
-
     }
 
     private function isExecuteConditionMatched() :bool
