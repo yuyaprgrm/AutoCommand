@@ -11,18 +11,16 @@ namespace autocommand\condition;
 class Condition
 {
 
-    const DEFAULT_PLAYER_MIN = 0;
-    const DEFAULT_PLAYER_MAX = -1;
-
-
     private $players;
 
 
     public function __construct(array $conditionData)
     {
+        $this->parse($conditionData);
     }
 
     private function parse(array $conditionData)
     {
+        $this->players = new PlayerCondition($conditionData["player"] ?? null);
     }
 }
