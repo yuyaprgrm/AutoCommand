@@ -19,7 +19,6 @@ class Main extends PluginBase
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->loadSetting();
         $this->loadCommandSender();
-        print_r($this->config->get("参加人数"));
 
         if (!empty($enable = $this->config->get("起動時"))) {
             $this->doAutoCommand($enable);
